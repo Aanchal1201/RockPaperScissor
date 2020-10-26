@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  /* width: 50%;  */
+  max-width: 700px;
+  margin: 20px auto 5px;
+  padding-bottom: 10px;
+  border: 2px solid black;
+  border-radius: 15px;
+  position: relative;
+}
+
+.contain::before {
+  content: "";
+  background: url("https://source.unsplash.com/1600x900/?game");
+  background-size: cover;
+  position: fixed;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.header {
+  text-align: center;
+  margin: 20px;
+}
+
+.header h2 {
+  font-size: 37px;
+  letter-spacing: 1.5px;
+  color: rgb(59, 59, 59);
+  margin: 10px;
+  font-family: "Grenze Gotisch", cursive;
+}
+
+.header div {
+  font-size: 20px;
+}
+
+.win {
+  border: 2px solid black;
+  margin: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 25px;
+  border-radius: 6px;
+}
+
+.score {
+  background-color: rgb(219, 147, 13);
+  color: white;
+  border: 1px solid black;
+  padding: 5px 15px;
+  font-size: 22px;
+  border-radius: 5px;
+}
+
+.selectElement {
+  display: flex;
+  justify-content: space-around;
+  font-size: 22px;
+}
+
+.selectElement span {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+}
+
+#userSelection {
+  font-size: 25px;
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+}
+
+.choose {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Grenze Gotisch", cursive;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.line {
+  height: 4px;
+  width: 160px;
+  background-color: rgb(219, 147, 13);
+  margin: 15px;
+}
+
+.btn {
+  width: 25%;
+  height: 130px;
+  border-radius: 50%;
+  border: none;
+  margin: 5px 10px;
+  font-size: 25px;
+  outline: none;
+  cursor: pointer;
+  transition: 1s;
+  font-family: "Special Elite", cursive;
+  -webkit-box-shadow: 5px 5px 13px 0px rgba(60, 50, 50, 0.97);
+  -moz-box-shadow: 5px 5px 13px 0px rgba(60, 50, 50, 0.97);
+  box-shadow: 5px 5px 13px 0px rgba(60, 50, 50, 0.97);
+}
+
+.btn:hover {
+  box-shadow: 10px -7px 30px -3px rgba(0, 0, 0, 0.92) inset;
+  -webkit-box-shadow: 10px -7px 30px -3px rgba(0, 0, 0, 0.92) inset;
+  -moz-box-shadow: 10px -7px 30px -3px rgba(0, 0, 0, 0.92) inset;
+}
+
+.btn:nth-child(1) {
+  background: rgb(199, 199, 199) url('Images/rock.png') no-repeat;
+  background-size: cover;
+}
+
+.btn:nth-child(2) {
+    background: rgb(199, 199, 199) url('Images/paper.png') no-repeat;
+    background-size: cover;
+}
+
+.btn:nth-child(3) {
+    background: rgb(199, 199, 199) url('Images/scissor.png') no-repeat;
+    background-size: cover;
+}
+
+.btn:nth-child(1):hover {
+  filter: grayscale(100%);
+}
+
+.btn:nth-child(2):hover {
+    filter: grayscale(100%);
+}
+
+.btn:nth-child(3):hover {
+    filter: grayscale(100%);
+}
+
+.button {
+  margin: 15px 25px;
+  margin-bottom: 2px;
+  padding: 1px;
+}
+
+#message {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bolder;
+  font-family: "Nunito", sans-serif;
+}
+
+.reset {
+  text-align: center;
+}
+
+.reset button {
+  padding: 4px;
+  font-size: 32px;
+  margin: 5px;
+  width: 30%;
+  border-radius: 8px;
+  background-color: rgba(63, 138, 111, 0.911);
+  outline: none;
+  border: 1px solid grey;
+  transition: 1s;
+  color: white;
+  font-family: "Grenze Gotisch", cursive;
+  -webkit-box-shadow: 5px 5px 13px 0px rgba(60, 50, 50, 0.97);
+  -moz-box-shadow: 5px 5px 13px 0px rgba(60, 50, 50, 0.97);
+  box-shadow: 5px 5px 13px 0px rgba(60, 50, 50, 0.97);
+}
+
+.reset button:hover {
+  background-color: rgb(89, 177, 148);
+  box-shadow: 10px -7px 30px -3px rgba(0, 0, 0, 0.92) inset;
+  -webkit-box-shadow: 10px -7px 30px -3px rgba(0, 0, 0, 0.92) inset;
+  -moz-box-shadow: 10px -7px 30px -3px rgba(0, 0, 0, 0.92) inset;
+}
+@media only screen and (max-width:520px){
+    .selectElement{
+        flex-direction: column;
+        margin: 15px;
+    }
+    .btn{
+        width: 40%;
+    }
+}
+@media only screen and (max-width:400px){
+    .win{
+        flex-direction: column;
+        margin: 15px;
+    }
+    .btn{
+        width: 55%;
+        margin: 15px;
+    }
+}
+@media only screen and (max-width:300px){
+    .reset button{
+        width: auto;
+    }
+    .btn{
+        width: 85%;
+    }
+}
+
